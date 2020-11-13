@@ -18,3 +18,8 @@ ExecStart=
 WantedBy=multi-user.target      
 EOT
 ```
+
+## Add user to sudoers
+```bash
+echo "${SERVICE} ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/${SERVICE} 
+```
