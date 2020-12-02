@@ -12,7 +12,7 @@ RUN useradd -md ${HOME} -s /bin/bash ${SERVICE} && \
     chown -R ${SERVICE}:${SERVICE} ${HOME} && \
     sudo yum install -y java-1.8.0-openjdk.x86_64
 WORKDIR ${HOME}
-ADD https://www.atlassian.com/software/bamboo/downloads/binary/atlassian-bamboo-6.6.3.tar.gz ${home}
+ADD https://www.atlassian.com/software/bamboo/downloads/binary/atlassian-bamboo-7.1.4.tar.gz ${home}
 
 WORKDIR ${HOME}
 CMD /usr/sbin/init
