@@ -6,7 +6,8 @@ RUN yum clean all && \
     yum -y update && \
     yum -y install sudo && \
     yum -y install wget && \
-    yum -y install vim
+    yum -y install vim && \
+    yum -y install traceroute
 RUN useradd -md ${HOME} -s /bin/bash ${SERVICE} && echo ${SERVICE} | passwd ${SERVICE} --stdin && \
     echo "${SERVICE} ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/${SERVICE} && \
     chown -R ${SERVICE}:${SERVICE} $HOME
